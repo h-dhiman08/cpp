@@ -12,7 +12,7 @@ public:
 
     // Function to add two Complex numbers
     Complex operator+(const Complex& other) {
-        return Complex(real + other.real, imag + other.imag);
+        return Complex(this->real + other.real, this->imag + other.imag);
     }
 
     // Function to display the complex number
