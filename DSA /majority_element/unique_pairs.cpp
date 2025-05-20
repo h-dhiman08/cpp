@@ -11,7 +11,7 @@ int main() {
     {
         for (int j = i + 1; j < size;j++)
         {
-            cout << arr[j] << " ";
+            cout << "("<< arr[i] << "," << arr[j] << ")" << " ";
         }
         cout << endl;
     }
