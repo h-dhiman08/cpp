@@ -1,29 +1,25 @@
 #include<iostream>
 #include<vector>
+
 using namespace std;
 
-
 int main() {
-    int arr[] = {2,7,11,15};    
-    int size = sizeof(arr)/sizeof(arr[0]);
+    vector<int> vec = {2,7,11,15};
+    vector<int> ans;
 
     int target = 9;
-    vector<int> vec;
-
-    // implementing the brute force technique
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i < vec.size(); i++)
     {
-        for (int j = i+1; j < size; j++)
+        for (int j = i+1; j < vec.size(); j++)
         {
-            if((arr[i] + arr[j]) == target){
-                vec.push_back(i); // first number index
-                vec.push_back(j); // second number index
+            if ((vec[i]+vec[j])==target)
+            {
+                vec.push_back(i);
+                vec.push_back(j);
             }
         }
     }
     
-
-    cout << "First index: " << vec[0] << endl;
-    cout << "Second index: " << vec[1] << endl;
+    cout << "Pair is: (" << vec[0] << "," << vec[1] << ")" << endl;
     return 0;
 }
