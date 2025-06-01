@@ -16,9 +16,7 @@ public:
 };
 
 int main(){
-    MyComplex c1;
-    
-    MyComplex *ptr = &c1; // Pointer to object c1
+    MyComplex *ptr = new MyComplex; 
     (*ptr).set(3, 4); // Using dereferencing to call set method
     (*ptr).get(); // Using dereferencing to call get method
     return 0;
