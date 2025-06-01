@@ -9,11 +9,11 @@ int maxSub(const int *arr,const int &size){
     int currSum = 0;
     for(int i = 0; i < size; i++){
         currSum += arr[i];
+        maxSum = max(maxSum, currSum);
         if (currSum < 0)
         {
             currSum = 0;
         }
-        maxSum = max(maxSum, currSum);
     }
     return maxSum;
 }
