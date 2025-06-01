@@ -3,12 +3,13 @@
 using namespace std;
 
 int main(){
-    int arr[5] = {1,2,3,4,5};
+    int arr[] = {1,2,3,4,5};
+    int size = sizeof(arr)/sizeof(arr[0]);
     
     // travelling the array's subarrays
-    for (int st = 0; st < 5; st++)
+    for (int st = 0; st < size; st++)
     {
-        for (int end = st; end < 5; end++)
+        for (int end = st; end < size; end++)
         { 
             for (int i = st; i <= end; i++)
             {
